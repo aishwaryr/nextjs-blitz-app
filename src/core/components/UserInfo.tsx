@@ -4,7 +4,7 @@ import { useCurrentUser } from "src/users/hooks/useCurrentUser";
 import { useMutation } from "@blitzjs/rpc";
 import logout from "src/auth/mutations/logout";
 
-const UserInfo = () => {
+export const UserInfo = () => {
   const currentUser = useCurrentUser();
   const [logoutMutation] = useMutation(logout);
 
@@ -38,5 +38,3 @@ const UserInfo = () => {
     );
   }
 };
-
-export default UserInfo;
